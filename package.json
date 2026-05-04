@@ -1,0 +1,9 @@
+{
+  "name": "contentful-sms-jokes",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "alexa-sdk": "^1.0.10",
+    "contentful": "^5.1.1"
+  }
+}
