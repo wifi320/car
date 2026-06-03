@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- استدعاء مكتبة Supabase -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warranty sticker validation</title>
+    <!-- Supabase library -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9178907045493989"
      crossorigin="anonymous"></script>
     <meta name="google-adsense-account" content="ca-pub-9178907045493989">
     <style>
+        /* ---------- الأنماط الأساسية (بدون تغيير) ---------- */
         * {
             margin: 0;
             padding: 0;
@@ -149,13 +154,15 @@
         .success { color: #28a745; font-weight: bold; }
         .error { color: #dc3545; font-weight: bold; }
 
-        /* ===== أنماط قسم التحذير (كما هو أحمر) ===== */
+        /* ---------- قسم التحذير (خلفيته بلون الصفحة #f4f4f9) ---------- */
         .warning-message {
             color: red;
             margin: 20px 0;
-            padding: 0;
+            padding: 10px;
             text-align: center;
             font-size: 0.9rem;
+            background-color: #f4f4f9;   /* نفس لون الصفحة */
+            border-radius: 5px;
         }
 
         .warning-text-bold {
@@ -188,14 +195,14 @@
             text-decoration: none;
         }
 
-        /* ===== أنماط الحاشية السفلية (الخلفية رمادية #f4f4f9) ===== */
+        /* ---------- الحاشية السفلية (الروابط) بلون خلفية البانر السفلي (#f4f4f9) ---------- */
         .links {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
             text-align: left;
             padding-left: 40px;
-            background-color: #f4f4f9;  /* رمادي مثل لون البانر */
+            background-color: #f4f4f9;   /* نفس لون البانر السفلي */
             flex-wrap: wrap;
         }
 
@@ -266,6 +273,7 @@
             margin-bottom: 20px;
         }
 
+        /* الأزرار الثابتة السفلية */
         .bottom-buttons {
             display: flex;
             justify-content: space-around;
@@ -372,19 +380,19 @@
 
         <div id="result"></div>
 
-        <!-- قسم التحذير (كما هو أحمر) -->
+        <!-- قسم التحذير (خلفيته الآن بلون الصفحة #f4f4f9) -->
         <div class="warning-message">
             <p class="warning-text-bold">
                 نحذر عملائنا الكرام من وجود ملصق ضمان مزور يحتوي على رمز إستجابة سريع يوجه المستخدمين لصفحة إلكترونية مزورة تشبه هذه الصفحة.<br>
                 يجب أن يكون عنوان الصفحة يتبع لعنوان موقعنا الرسمي:
-                <span class="warning-url">arabcomputers.com.sa/</span>
+                <span class="warning-url"><a href="https://arabcomputers.com.sa/" style="color: #000000; text-decoration: none;">arabcomputers.com.sa/</a></span>
             </p>
             <p class="warning-text-normal">
                 <span class="notice-title">Important Notice to Our Valued Customers:</span>
-                We would like to alert you to the presence of counterfeit warranty stickers featuring a QR code that directs users to a fraudulent website designed to imitate the official Arab Computers website.
+                 We would like to alert you to the presence of counterfeit warranty stickers featuring a QR code that directs users to a fraudulent website designed to imitate the official Arab Computers website.<br>
             </p>
         </div>
-    </div>
+    </div> <!-- closing .container -->
 
     <!-- الأزرار الثابتة السفلية -->
     <div class="bottom-buttons">
@@ -396,7 +404,7 @@
         </button>
     </div>  
 
-    <!-- روابط الفوتر (الخلفية رمادية #f4f4f9) -->
+    <!-- الحاشية السفلية (الروابط) بخلفية رمادية #f4f4f9 -->
     <div class="links">
         <div class="left-section">
             <div>
@@ -521,4 +529,4 @@
         });
     </script>
 </body>
-</html>
+    </html>
