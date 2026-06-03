@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warranty sticker validation</title>
     <!-- استدعاء مكتبة Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <!-- Google AdSense (من الكود الثاني) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9178907045493989"
      crossorigin="anonymous"></script>
     <meta name="google-adsense-account" content="ca-pub-9178907045493989">
     <style>
-        /* ---------- الأنماط الأصلية من الكود الأول (بدون تغيير) ---------- */
         * {
             margin: 0;
             padding: 0;
@@ -24,7 +19,7 @@
             background-color: #f4f4f9;
             color: #333;
             line-height: 1.6;
-            padding-bottom: 70px; /* تمت الإضافة لمنع تداخل المحتوى مع الأزرار الثابتة */
+            padding-bottom: 70px;
         }
 
         .container {
@@ -154,7 +149,7 @@
         .success { color: #28a745; font-weight: bold; }
         .error { color: #dc3545; font-weight: bold; }
 
-        /* ---------- أنماط الحاشية السفلية (Footer) من الكود الثاني مع تعديل الخلفية ---------- */
+        /* ===== أنماط قسم التحذير (كما هو أحمر) ===== */
         .warning-message {
             color: red;
             margin: 20px 0;
@@ -193,14 +188,14 @@
             text-decoration: none;
         }
 
-        /* الروابط - الخلفية أصبحت شفافة لتأخذ لون الصفحة الرمادي (#f4f4f9) */
+        /* ===== أنماط الحاشية السفلية (الخلفية رمادية #f4f4f9) ===== */
         .links {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
             text-align: left;
             padding-left: 40px;
-            background-color: transparent;   /* تم التعديل: من #fff إلى transparent */
+            background-color: #f4f4f9;  /* رمادي مثل لون البانر */
             flex-wrap: wrap;
         }
 
@@ -271,7 +266,6 @@
             margin-bottom: 20px;
         }
 
-        /* الأزرار الثابتة السفلية */
         .bottom-buttons {
             display: flex;
             justify-content: space-around;
@@ -322,11 +316,8 @@
             stroke: #333;
         }
 
-        /* استجابة للشاشات الصغيرة */
         @media (max-width: 768px) {
-            .input-container {
-                width: 70%;
-            }
+            .input-container { width: 70%; }
             .links {
                 flex-direction: column;
                 padding-left: 20px;
@@ -343,26 +334,17 @@
         }
 
         @media (max-width: 480px) {
-            .input-container {
-                width: 90%;
-            }
-            .input-container button {
-                padding: 10px 15px;
-            }
-            body {
-                padding-bottom: 60px;
-            }
+            .input-container { width: 90%; }
+            .input-container button { padding: 10px 15px; }
+            body { padding-bottom: 60px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- رأس الصفحة الأصلي -->
         <div class="header-content">
             <img src="https://i.postimg.cc/zvf2c47L/image.png" alt="Website Logo" class="logo">
-            <div class="breadcrumb">
-                <!-- تم إبقاء فارغاً كما في الكود الأصلي -->
-            </div>
+            <div class="breadcrumb"></div>
         </div>
 
         <h2>Warranty sticker validation</h2>
@@ -389,21 +371,19 @@
         </div>
 
         <div id="result"></div>
-    </div> <!-- نهاية container -->
 
-    <!-- ====================== بداية الحاشية السفلية (Footer) من الكود الثاني ====================== -->
-    
-    <!-- قسم التحذير الأحمر -->
-    <div class="warning-message">
-        <p class="warning-text-bold">
-            نحذر عملائنا الكرام من وجود ملصق ضمان مزور يحتوي على رمز إستجابة سريع يوجه المستخدمين لصفحة إلكترونية مزورة تشبه هذه الصفحة.<br>
-            يجب أن يكون عنوان الصفحة يتبع لعنوان موقعنا الرسمي:
-            <span class="warning-url"><a href="https://arabcomputers.com.sa/" style="color: #000000; text-decoration: none;">arabcomputers.com.sa/</a></span>
-        </p>
-        <p class="warning-text-normal">
-            <span class="notice-title">Important Notice to Our Valued Customers:</span>
-             We would like to alert you to the presence of counterfeit warranty stickers featuring a QR code that directs users to a fraudulent website designed to imitate the official Arab Computers website.<br>
-        </p>
+        <!-- قسم التحذير (كما هو أحمر) -->
+        <div class="warning-message">
+            <p class="warning-text-bold">
+                نحذر عملائنا الكرام من وجود ملصق ضمان مزور يحتوي على رمز إستجابة سريع يوجه المستخدمين لصفحة إلكترونية مزورة تشبه هذه الصفحة.<br>
+                يجب أن يكون عنوان الصفحة يتبع لعنوان موقعنا الرسمي:
+                <span class="warning-url">arabcomputers.com.sa/</span>
+            </p>
+            <p class="warning-text-normal">
+                <span class="notice-title">Important Notice to Our Valued Customers:</span>
+                We would like to alert you to the presence of counterfeit warranty stickers featuring a QR code that directs users to a fraudulent website designed to imitate the official Arab Computers website.
+            </p>
+        </div>
     </div>
 
     <!-- الأزرار الثابتة السفلية -->
@@ -416,7 +396,7 @@
         </button>
     </div>  
 
-    <!-- روابط الفوتر (الخلفية الآن شفافة = نفس لون الصفحة الرمادي) -->
+    <!-- روابط الفوتر (الخلفية رمادية #f4f4f9) -->
     <div class="links">
         <div class="left-section">
             <div>
@@ -424,26 +404,22 @@
             </div>
         </div>
 
-        <!-- Useful Links Section -->
         <div class="links-section">
             <h2>Useful Links</h2>
             <div class="links-grid">
                 <div class="link-row">
                     <div class="link-left"><a href="https://arabcomputers.com.sa/">Home</a></div>
-                    <div class="link-right"><strong><a href="https://arabcomputers.com.sa/dpp/" style="color: #333; text-decoration: none;">DPP</a></strong></div>
+                    <div class="link-right"><strong><a href="https://arabcomputers.com.sa/dpp/">DPP</a></strong></div>
                 </div>
                 <div class="link-row">
                     <div class="link-left"><a href="https://arabcomputers.com.sa/point-of-sales/">Point Of Sales</a></div>
-                    <div class="link-right"></div>
                 </div>
                 <div class="link-row">
                     <div class="link-left"><a href="https://arabcomputers.com.sa/contact/">Contact Us</a></div>
-                    <div class="link-right"></div>
                 </div>
             </div>
         </div>
 
-        <!-- Products Section -->
         <div class="links-section">
             <h2>Products</h2>
             <div class="links-grid">
@@ -462,7 +438,6 @@
             </div>
         </div>
 
-        <!-- Information Section -->
         <div class="links-section">
             <h2>Information</h2>
             <div class="links-grid">
@@ -477,28 +452,22 @@
             </div>
         </div>
 
-        <!-- Support and Sales Section -->
         <div class="links-section">
             <h2>Support and Sales</h2>
             <div class="contact-info">
                 <p><strong>For Maintenance:</strong></p>
                 <p><a href="https://ac-care.com.sa/">Visit AC-Care</a></p>
-                
                 <p><strong>For Individual Sales:</strong></p>
                 <p><a href="https://arabcomputers.com.sa/point-of-sales/">Point of Sales</a></p>
-                
                 <p><strong>For corporate or channels sales:</strong></p>
                 <p><a href="mailto:sales@arabcomputers.com.sa">sales@arabcomputers.com.sa</a></p>
             </div>
         </div>
     </div>
-    <!-- ====================== نهاية الحاشية السفلية ====================== -->
 
     <script>
-        // --- إعدادات Supabase الأصلية (لم يتم تغيير أي شيء) ---
         const SUPABASE_URL = 'https://zihywniznqjfhczotshe.supabase.co';
         const SUPABASE_KEY = 'sb_publishable_mGZlZxplHYI3nawbF8xH7A_bt016_e-';
-
         const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
         async function validateForm(event) {
@@ -509,14 +478,12 @@
 
             if (!input) return;
 
-            // تغيير حالة الزر أثناء التحقق
             button.disabled = true;
             button.classList.add('pressed');
             resultElement.textContent = "Checking... جاري التحقق...";
             resultElement.className = '';
 
             try {
-                // 1. البحث عن الرمز في قاعدة البيانات
                 const { data, error } = await _supabase
                     .from('verification_codes')
                     .select('*')
@@ -530,14 +497,12 @@
                     resultElement.textContent = "This code has already been used ❌ تم استخدام هذا الرمز مسبقاً !";
                     resultElement.className = 'error';
                 } else {
-                    // 2. إذا كان الرمز صحيحاً وغير مستخدم، نقوم بتعطيله فوراً
                     const { error: updateError } = await _supabase
                         .from('verification_codes')
                         .update({ is_used: true })
                         .eq('id', data.id);
 
                     if (updateError) throw updateError;
-
                     resultElement.textContent = "The code is correct ✅ هذا الرمز صحيح";
                     resultElement.className = 'success';
                 }
@@ -551,7 +516,6 @@
             }
         }
 
-        // دعم زر Enter
         document.getElementById('numberInput').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') validateForm(e);
         });
