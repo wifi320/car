@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warranty sticker validation</title>
-    <!-- Supabase library -->
+    <!-- استدعاء مكتبة Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <!-- Google AdSense (from second code, kept for consistency but not mandatory) -->
+    <!-- Google AdSense (من الكود الثاني) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9178907045493989"
      crossorigin="anonymous"></script>
     <meta name="google-adsense-account" content="ca-pub-9178907045493989">
     <style>
-        /* ---------- ORIGINAL FIRST CODE STYLES (kept exactly as provided) ---------- */
+        /* ---------- الأنماط الأصلية من الكود الأول (بدون تغيير) ---------- */
         * {
             margin: 0;
             padding: 0;
@@ -24,8 +24,7 @@
             background-color: #f4f4f9;
             color: #333;
             line-height: 1.6;
-            /* add bottom padding so fixed bottom bar does not overlap content */
-            padding-bottom: 70px;
+            padding-bottom: 70px; /* تمت الإضافة لمنع تداخل المحتوى مع الأزرار الثابتة */
         }
 
         .container {
@@ -155,7 +154,7 @@
         .success { color: #28a745; font-weight: bold; }
         .error { color: #dc3545; font-weight: bold; }
 
-        /* ---------- FOOTER / HASHIYA STYLES (from second code, merged without conflicts) ---------- */
+        /* ---------- أنماط الحاشية السفلية (Footer) من الكود الثاني مع تعديل الخلفية ---------- */
         .warning-message {
             color: red;
             margin: 20px 0;
@@ -194,14 +193,14 @@
             text-decoration: none;
         }
 
-        /* links & footer sections */
+        /* الروابط - الخلفية أصبحت شفافة لتأخذ لون الصفحة الرمادي (#f4f4f9) */
         .links {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
             text-align: left;
             padding-left: 40px;
-            background-color: #fff;
+            background-color: transparent;   /* تم التعديل: من #fff إلى transparent */
             flex-wrap: wrap;
         }
 
@@ -272,7 +271,7 @@
             margin-bottom: 20px;
         }
 
-        /* bottom fixed buttons */
+        /* الأزرار الثابتة السفلية */
         .bottom-buttons {
             display: flex;
             justify-content: space-around;
@@ -323,7 +322,7 @@
             stroke: #333;
         }
 
-        /* responsive adjustments for footer (from second code) */
+        /* استجابة للشاشات الصغيرة */
         @media (max-width: 768px) {
             .input-container {
                 width: 70%;
@@ -358,11 +357,11 @@
 </head>
 <body>
     <div class="container">
-        <!-- header unchanged from first code -->
+        <!-- رأس الصفحة الأصلي -->
         <div class="header-content">
             <img src="https://i.postimg.cc/zvf2c47L/image.png" alt="Website Logo" class="logo">
             <div class="breadcrumb">
-                <!-- original empty breadcrumb kept as is -->
+                <!-- تم إبقاء فارغاً كما في الكود الأصلي -->
             </div>
         </div>
 
@@ -390,23 +389,24 @@
         </div>
 
         <div id="result"></div>
+    </div> <!-- نهاية container -->
 
-        <!-- ========== START OF FOOTER / AL-HASHIYA AS-SOFLEYA (from second code) ========== -->
-        <!-- warning message section (exactly from second code) -->
-        <div class="warning-message">
-            <p class="warning-text-bold">
-                نحذر عملائنا الكرام من وجود ملصق ضمان مزور يحتوي على رمز إستجابة سريع يوجه المستخدمين لصفحة إلكترونية مزورة تشبه هذه الصفحة.<br>
-                يجب أن يكون عنوان الصفحة يتبع لعنوان موقعنا الرسمي:
-                <span class="warning-url"><a href="https://arabcomputers.com.sa/" style="color: #000000; text-decoration: none;">arabcomputers.com.sa/</a></span>
-            </p>
-            <p class="warning-text-normal">
-                <span class="notice-title">Important Notice to Our Valued Customers:</span>
-                 We would like to alert you to the presence of counterfeit warranty stickers featuring a QR code that directs users to a fraudulent website designed to imitate the official Arab Computers website.<br>
-            </p>
-        </div>
-    </div> <!-- closing .container -->
+    <!-- ====================== بداية الحاشية السفلية (Footer) من الكود الثاني ====================== -->
+    
+    <!-- قسم التحذير الأحمر -->
+    <div class="warning-message">
+        <p class="warning-text-bold">
+            نحذر عملائنا الكرام من وجود ملصق ضمان مزور يحتوي على رمز إستجابة سريع يوجه المستخدمين لصفحة إلكترونية مزورة تشبه هذه الصفحة.<br>
+            يجب أن يكون عنوان الصفحة يتبع لعنوان موقعنا الرسمي:
+            <span class="warning-url"><a href="https://arabcomputers.com.sa/" style="color: #000000; text-decoration: none;">arabcomputers.com.sa/</a></span>
+        </p>
+        <p class="warning-text-normal">
+            <span class="notice-title">Important Notice to Our Valued Customers:</span>
+             We would like to alert you to the presence of counterfeit warranty stickers featuring a QR code that directs users to a fraudulent website designed to imitate the official Arab Computers website.<br>
+        </p>
+    </div>
 
-    <!-- bottom fixed buttons (exactly from second code) -->
+    <!-- الأزرار الثابتة السفلية -->
     <div class="bottom-buttons">
         <button class="menu-button">☰</button>
         <button class="home-button" onclick="window.location.href='https://arabcomputers.com.sa/'">
@@ -416,11 +416,11 @@
         </button>
     </div>  
 
-    <!-- links section (footer links, products, information, support) from second code -->
+    <!-- روابط الفوتر (الخلفية الآن شفافة = نفس لون الصفحة الرمادي) -->
     <div class="links">
         <div class="left-section">
             <div>
-                <img src="https://i.postimg.cc/SKC7Wqhm/Screenshot-com-android-chrome.png" alt="بانر الموقع" class="banner" style="margin-bottom: 20px; max-height: none; width: auto;">
+                <img src="https://i.postimg.cc/SKC7Wqhm/Screenshot-com-android-chrome.png" alt="بانر الموقع" style="max-width: 150px; margin-bottom: 20px;">
             </div>
         </div>
 
@@ -492,10 +492,10 @@
             </div>
         </div>
     </div>
-    <!-- ========== END OF FOOTER ========== -->
+    <!-- ====================== نهاية الحاشية السفلية ====================== -->
 
     <script>
-        // --- Supabase configuration (exactly from original first code, unchanged) ---
+        // --- إعدادات Supabase الأصلية (لم يتم تغيير أي شيء) ---
         const SUPABASE_URL = 'https://zihywniznqjfhczotshe.supabase.co';
         const SUPABASE_KEY = 'sb_publishable_mGZlZxplHYI3nawbF8xH7A_bt016_e-';
 
